@@ -1,4 +1,4 @@
-cat(paste(Sys.time(), "-- Loading packages\n"))
+cat(paste(format(Sys.time()), "-- Loading packages\n"))
 
 suppressPackageStartupMessages({
   library("readr")
@@ -9,7 +9,7 @@ suppressPackageStartupMessages({
 
 invisible(Sys.setlocale("LC_TIME", "C"))
 
-cat(paste(Sys.time(), "-- Reading data\n"))
+cat(paste(format(Sys.time()), "-- Reading data\n"))
 
 proj_dat <- read_csv("gantt.csv", show_col_types = FALSE)
 spot_dat <- read_csv("spots.csv", show_col_types = FALSE)
@@ -34,4 +34,4 @@ p <- ganttrify(
 
 ggsave(filename = "gantt.png", plot = p, width = 300, height = 200, units = "mm")
 
-cat(paste(Sys.time(), "-- Gantt chart has been updated\n"))
+cat(paste(format(Sys.time()), "-- Gantt chart has been updated\n"))
