@@ -1,9 +1,10 @@
 cat(paste(Sys.time(), "-- Loading packages\n"))
 
 suppressPackageStartupMessages({
-  library(tidyverse)
-  library(colorspace)
-  library(ganttrify)
+  library("readr")
+  library("ggplot2")
+  library("colorspace")
+  library("ganttrify")
 })
 
 invisible(Sys.setlocale("LC_TIME", "C"))
