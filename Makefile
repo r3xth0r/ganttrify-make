@@ -1,0 +1,2 @@
+gantt:
+	Rscript gantt.R
