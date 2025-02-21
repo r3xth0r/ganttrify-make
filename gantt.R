@@ -1,7 +1,6 @@
 cat(paste(format(Sys.time()), "-- Loading packages\n"))
 
 suppressPackageStartupMessages({
-  library("readr")
   library("ggplot2")
   library("colorspace")
   library("ganttrify")
@@ -11,8 +10,8 @@ invisible(Sys.setlocale("LC_TIME", "C"))
 
 cat(paste(format(Sys.time()), "-- Reading data\n"))
 
-proj_dat <- read_csv("gantt.csv", show_col_types = FALSE)
-spot_dat <- read_csv("spots.csv", show_col_types = FALSE)
+proj_dat <- read.csv("gantt.csv")
+spot_dat <- read.csv("spots.csv")
 
 n_col <- length(unique(proj_dat$wp))
 
