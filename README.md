@@ -1,8 +1,8 @@
-# Gantt-Charts
+# Gantt chart maker
 
-Schnelle Implementierung von optisch etwas ansprechenderen Gantt-Charts mithilfe von [`ganttrify`](https://github.com/giocomai/ganttrify) in R.
+Easily create visually appealing Gantt charts using [`ganttrify`](https://github.com/giocomai/ganttrify) in R.
 
-Folgende Files liegen in diesem Directory:
+The repository contains the following files:
 
 ```
 gantt
@@ -13,9 +13,9 @@ gantt
 └── spots.csv
 ```
 
-- `gantt.csv` betrifft Tasks pro Arbeitspaket. Das File enthält Informationen zum Arbeitspaket (`wp`), Task (`activity`) sowie Startdatum (`start_date`) und Enddatum (`end_date`), jeweils in Projektmonaten gemessen.
-- `spots.csv` betrifft Meilensteine pro Task. Das File Informationen zum Task (`activity`), zum Meilenstein (`spot_type`) zum Fälligkeitsdatum (`spot_date`), ebenso in Projektmonaten.
-- `gantt.R` ist das R Skipt zum Erstellen des Plots mit `ganttrify`. Weitere im Moment verwendete Pakete sind `colorspace` und `tidyverse`, beide sind für die Kernfunktionalität allerdings nicht zwingend notwendig.
--  `Makefile` zum schnellen Erstellen/Updaten des Plots via Terminal. 
+- `gantt.csv`: This file contains the tasks for each work package. It includes details about the work package (`wp`), task (`activity`), start date (`start_date`), and end date (`end_date`), all measured in project months.
+- `spots.csv`: This file tracks milestones for each task. It provides information on the task (`activity`), milestone type (`spot_type`), and due date (`spot_date`), also in project months.
+- `gantt.R`: This is the main R script that generates the Gantt chart using `ganttrify`. While it also utilizes the `colorspace` and `tidyverse` packages, these are not essential for the main functionality.
+- `Makefile`: Use this file to quickly create or update the Gantt chart directly from the terminal.
 
-Für die Interaktive Erstellung gibt es auch eine Shiny App unter <https://ganttrify.europeandatajournalism.eu/>.
+For an interactive experience, check out the Shiny app available at <https://ganttrify.europeandatajournalism.eu/>. This app allows you to create and customize Gantt charts in a web GUI.
