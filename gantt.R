@@ -1,3 +1,5 @@
+#!/usr/bin/Rscript
+
 cat(paste(format(Sys.time()), "-- Loading packages\n"))
 
 suppressPackageStartupMessages({
